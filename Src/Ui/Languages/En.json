@@ -1,0 +1,20 @@
+{
+    "File":             "File",
+    "Open":             "Open",
+    "Open project":     "Open project                                  Ctrl+Shift+O",
+    "Open file":        "Open file                                        Ctrl+O  ",
+    "Create":           "Create",
+    "Create project":   "Create project                                 Ctrl+Shift+S",
+    "Create file":      "Create file                                       Ctrl+S  ",
+    "Exit":             "Exit                                              Ctrl+Q   ",
+
+    "Help":             "Help",
+    "Language":         "Language                      ",
+    "West Europe":      "West Europe                   ",
+    "Russia":           "Russia                        ",
+    "English":          "English",
+    "Russian":          "Русский",
+    "Color theme":      "Color theme                   ",
+    "Dark theme":       "Dark theme",
+    "Light theme":      "Light theme"
+}

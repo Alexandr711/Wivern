@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>DarkTheme/MainDarkColorTheme.qss</file>
+        <file>DarkTheme/MenuDarkColorTheme.qss</file>
+    </qresource>
+    <qresource prefix="/ImagesTopToolBar">
+        <file>DarkTheme/DarkThemeForToolBars/File.png</file>
+        <file>DarkTheme/DarkThemeForToolBars/FolderIco.png</file>
+        <file>DarkTheme/DarkThemeForToolBars/ReturnIco.png</file>
+        <file>DarkTheme/DarkThemeForToolBars/SaveAll.png</file>
+        <file>DarkTheme/DarkThemeForToolBars/SaveIco.png</file>
+        <file>DarkTheme/DarkThemeForToolBars/UndoIco.png</file>
+    </qresource>
+    <qresource prefix="/IcoForMenu">
+        <file>DarkTheme/IcoForMenu/OpenIco.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,21 @@
+{
+    "File":             "Файл",
+    "Open":             "Открыть",
+    "Open project":     "Открыть проект                                 Ctrl+Shift+O",
+    "Open file":        "Открыть файл                                    Ctrl+O    ",
+    "Create":           "Создать",
+    "Create project":   "Создать проект                                Ctrl+Shift+S",
+    "Create file":      "Создать файл                                   Ctrl+S    ",
+    "Exit":             "Выход                                          Ctrl+Q     ",
+
+    "Help":             "Помощь",
+    "Language":         "Язык                          ",
+    "West Europe":      "Западная Европа               ",
+    "Russia":           "Россия                        ",
+    "English":          "English",
+    "Russian":          "Русский",
+    "Color theme":      "Цветовая тема                 ",
+    "Dark theme":       "Темная тема",
+    "Light theme":      "Светлая тема"
+}
+
