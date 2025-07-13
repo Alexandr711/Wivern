@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>LightTheme/MainLightColorTheme.qss</file>
+        <file>LightTheme/MenuLightColorTheme.qss</file>
+        <file>LightTheme/MenuFileIco.json</file>
+    </qresource>
+    <qresource prefix="/IcoForMenu">
+        <file>LightTheme/IcoForMenu/CreateFileIco.png</file>
+        <file>LightTheme/IcoForMenu/CreateIco.png</file>
+        <file>LightTheme/IcoForMenu/OpenFileIco.png</file>
+        <file>LightTheme/IcoForMenu/OpenIco.png</file>
+        <file>LightTheme/IcoForMenu/OpenProjectIco.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,36 @@
+QMenuBar{
+    color: #000000;
+    background-color: #eeeef2;
+    padding-left: 20px;
+}
+
+QMenuBar::item{
+    color: #000000;
+    background-color: #eeeef2;
+    border: 1px solid #eeeef2;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+QMenuBar::item:selected{
+    color: #000000;
+    background-color: #f6f6f6;
+    border: 1px solid #e0e3e6;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+QToolBar{
+    color: #000000;
+    background-color: #eeeef2;
+    border: none;
+}
+
+QMainWindow{
+    color: #000000;
+    background-color: #eeeef2;
+}

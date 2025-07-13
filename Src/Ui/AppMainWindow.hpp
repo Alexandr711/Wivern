@@ -108,8 +108,8 @@ public:
 public slots:
     void setRussianLanguageSlot();
     void setEnglishLanguageSlot();
-    //void setDarkTheme();
-    //void setLightTheme();
+    void setDarkThemeSlot();
+    void setLightThemeSlot();
 };
 
 }

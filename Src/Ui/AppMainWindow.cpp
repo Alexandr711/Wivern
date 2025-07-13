@@ -200,7 +200,9 @@ void Wivern::MainWindow::createWindow()
 
     MenuHelp->addMenu(MenuSelectTheme);
     MenuSelectTheme->addAction(DarkTheme);
+    DarkTheme->setCheckable(true);
     MenuSelectTheme->addAction(LightTheme);
+    LightTheme->setCheckable(true);
 
     addToolBar(TopToolBar);
 
@@ -217,6 +219,8 @@ void Wivern::MainWindow::createTopToolBar()
     TopToolBar->addAction(ToolBarReturnAction);
 }
 
+
+//Setting language
 void Wivern::MainWindow::setLanguage(QString language)
 {
     QString LanguageString;
@@ -258,14 +262,26 @@ void Wivern::MainWindow::setLanguage(QString language)
     }
 }
 
+//Setting color theme
 void Wivern::MainWindow::setTheme(QString theme)
 {
     QString MainWindowStyleString;
     QString MenuStyleString;
+
+    QString MenuIconsString;
+
     if(theme == "Dark theme"){
         MainWindowStyleString = openQssFile(":/DarkTheme/MainDarkColorTheme.qss");
         MenuStyleString = openQssFile(":/DarkTheme/MenuDarkColorTheme.qss");
+        MenuIconsString = openJsonFileForReading(":/DarkTheme/MenuFileIco.json");
     }
+    else if(theme == "Light theme"){
+        MainWindowStyleString = openQssFile(":/LightTheme/MainLightColorTheme.qss");
+        MenuStyleString = openQssFile(":/LightTheme/MenuLightColorTheme.qss");
+        MenuIconsString = openJsonFileForReading(":/LightTheme/MenuFileIco.json");
+    }
+
+    QJsonDocument JsonMenuIcoDocument = QJsonDocument::fromJson(MenuIconsString.toUtf8());
 
     setStyleSheet(MainWindowStyleString);
 
@@ -277,8 +293,21 @@ void Wivern::MainWindow::setTheme(QString theme)
     MenuSelectTheme->setStyleSheet(MenuStyleString);
     RussiaLanguagesMenu->setStyleSheet(MenuStyleString);
     WestEuropeLanguageMenu->setStyleSheet(MenuStyleString);
-    MenuOpen->setIcon(QIcon(":/IcoForMenu/DarkTheme/IcoForMenu/OpenIco.png"));
-    //MenuOpen->
+    MenuOpen->setIcon(QIcon(JsonMenuIcoDocument["Open ico"].toString()));
+    CreateProjectAction->setIcon(QIcon(JsonMenuIcoDocument["Create project ico"].toString()));
+    CreateFileAction->setIcon(QIcon(JsonMenuIcoDocument["Create file ico"].toString()));
+    OpenFileAction->setIcon(QIcon(JsonMenuIcoDocument["Open file ico"].toString()));
+    OpenProjectAction->setIcon(QIcon(JsonMenuIcoDocument["Open project ico"].toString()));
+    if(theme == "Dark theme")
+    {
+        DarkTheme->setChecked(true);
+        LightTheme->setChecked(false);
+    }
+    else if(theme == "Light theme")
+    {
+        DarkTheme->setChecked(false);
+        LightTheme->setChecked(true);
+    }
 }
 
 
@@ -287,6 +316,10 @@ void Wivern::MainWindow::connectForMenuHelp()
 {
     connect(RussianAction, SIGNAL(triggered(bool)), this, SLOT(setRussianLanguageSlot()));
     connect(EnglishAction, SIGNAL(triggered(bool)), this, SLOT(setEnglishLanguageSlot()));
+
+    //connecting for change color theme
+    connect(LightTheme, SIGNAL(triggered(bool)), this, SLOT(setLightThemeSlot()));
+    connect(DarkTheme, SIGNAL(triggered(bool)), this, SLOT(setDarkThemeSlot()));
 }
 
 
@@ -301,6 +334,18 @@ void Wivern::MainWindow::setEnglishLanguageSlot()
 {
     setLanguage("English");
     openJsonFileForWriting("AppConfig.json", "Language", "English");
+}
+
+void Wivern::MainWindow::setDarkThemeSlot()
+{
+    setTheme("Dark theme");
+    openJsonFileForWriting("AppConfig.json", "Color theme", "Dark theme");
+}
+
+void Wivern::MainWindow::setLightThemeSlot()
+{
+    setTheme("Light theme");
+    openJsonFileForWriting("AppConfig.json", "Color theme", "Light theme");
 }
 
 

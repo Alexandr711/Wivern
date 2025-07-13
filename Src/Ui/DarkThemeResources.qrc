@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>DarkTheme/MainDarkColorTheme.qss</file>
         <file>DarkTheme/MenuDarkColorTheme.qss</file>
+        <file>DarkTheme/MenuFileIco.json</file>
     </qresource>
     <qresource prefix="/ImagesTopToolBar">
         <file>DarkTheme/DarkThemeForToolBars/File.png</file>
@@ -13,5 +14,9 @@
     </qresource>
     <qresource prefix="/IcoForMenu">
         <file>DarkTheme/IcoForMenu/OpenIco.png</file>
+        <file>DarkTheme/IcoForMenu/CreateIco.png</file>
+        <file>DarkTheme/IcoForMenu/CreateFileIco.png</file>
+        <file>DarkTheme/IcoForMenu/OpenFileIco.png</file>
+        <file>DarkTheme/IcoForMenu/OpenProjectIco.png</file>
     </qresource>
 </RCC>

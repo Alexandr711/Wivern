@@ -27,6 +27,7 @@ void Wivern::Application::initApplication()
     QJsonDocument JsonConfigAppDoc = QJsonDocument::fromJson(ConfigAppString.toUtf8());
     LanguageString = JsonConfigAppDoc["Language"].toString();
     ThemeString = JsonConfigAppDoc["Color theme"].toString();
+    //ThemeString = "Light theme";
 }
 
 void Wivern::Application::startMainWindowApplication()
