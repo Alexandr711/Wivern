@@ -1,0 +1,17 @@
+*{
+    background-color: #eeeef2;
+    border: 1px solid #eeeef2;
+    image: url(":/TopToolBarIco/LightTheme/LightThemeForTollBars/SaveAll.png");
+}
+
+
+*:hover{
+    background-color: #c9def5;
+    border: 1px solid #006cbe;
+}
+
+:pressed{
+    background-color: #006cbe;
+    border: 1px solid #006cbe;
+    image: url(":/TopToolBarIco/LightTheme/LightThemeForTollBars/SaveAllOpen.png");
+}

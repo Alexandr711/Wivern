@@ -3,6 +3,13 @@
         <file>DarkTheme/MainDarkColorTheme.qss</file>
         <file>DarkTheme/MenuDarkColorTheme.qss</file>
         <file>DarkTheme/MenuFileIco.json</file>
+        <file>DarkTheme/DarkThemeIcoTopToolBar.json</file>
+        <file>DarkTheme/DarkThemeForToolBars/CreateButton.qss</file>
+        <file>DarkTheme/DarkThemeForToolBars/OpenButton.qss</file>
+        <file>DarkTheme/DarkThemeForToolBars/ReturnButton.qss</file>
+        <file>DarkTheme/DarkThemeForToolBars/SaveAllButton.qss</file>
+        <file>DarkTheme/DarkThemeForToolBars/SaveButton.qss</file>
+        <file>DarkTheme/DarkThemeForToolBars/UndoButton.qss</file>
     </qresource>
     <qresource prefix="/ImagesTopToolBar">
         <file>DarkTheme/DarkThemeForToolBars/File.png</file>
@@ -18,5 +25,6 @@
         <file>DarkTheme/IcoForMenu/CreateFileIco.png</file>
         <file>DarkTheme/IcoForMenu/OpenFileIco.png</file>
         <file>DarkTheme/IcoForMenu/OpenProjectIco.png</file>
+        <file>DarkTheme/IcoForMenu/LanguageIco.png</file>
     </qresource>
 </RCC>

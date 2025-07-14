@@ -1,7 +1,7 @@
 QMenuBar{
     color: #ffffff;
     background-color: #1f1f1f;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 QMenuBar::item{
@@ -27,8 +27,10 @@ QMenuBar::item:selected{
 QToolBar{
     color: #ffffff;
     background-color: #1f1f1f;
-    border: none;
+    border: 1px solid #1f1f1f;
+    
 }
+
 
 QMainWindow{
     color: #ffffff;

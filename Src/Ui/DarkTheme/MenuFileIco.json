@@ -3,5 +3,6 @@
     "Create project ico": ":/IcoForMenu/DarkTheme/IcoForMenu/CreateIco.png",
     "Create file ico": ":/IcoForMenu/DarkTheme/IcoForMenu/CreateFileIco.png",
     "Open project ico": ":/IcoForMenu/DarkTheme/IcoForMenu/OpenProjectIco.png",
-    "Open file ico": ":/IcoForMenu/DarkTheme/IcoForMenu/OpenFileIco.png"
+    "Open file ico": ":/IcoForMenu/DarkTheme/IcoForMenu/OpenFileIco.png",
+    "Language ico": ":/IcoForMenu/DarkTheme/IcoForMenu/LanguageIco.png"
 }

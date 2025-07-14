@@ -63,12 +63,12 @@ private:
 
     //Top toolbar
     QToolBar* TopToolBar;
-    QToolButton* ToolBarOpenButton;
-    QAction* ToolBarCreateAction;
-    QAction* ToolBarSaveAction;
-    QAction* ToolBarSaveAllAction;
-    QAction* ToolBarUndoAction;
-    QAction* ToolBarReturnAction;
+    QToolButton* ToolBarOpenToolButton;
+    QToolButton* ToolBarCreateToolButton;
+    QToolButton* ToolBarSaveToolButton;
+    QToolButton* ToolBarSaveAllToolButton;
+    QToolButton* ToolBarUndoToolButton;
+    QToolButton* ToolBarReturnToolButton;
 
 private:
 //create function

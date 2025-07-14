@@ -3,6 +3,12 @@
         <file>LightTheme/MainLightColorTheme.qss</file>
         <file>LightTheme/MenuLightColorTheme.qss</file>
         <file>LightTheme/MenuFileIco.json</file>
+        <file>LightTheme/LightThemeForTollBars/CreateButton.qss</file>
+        <file>LightTheme/LightThemeForTollBars/OpenButton.qss</file>
+        <file>LightTheme/LightThemeForTollBars/ReturnButton.qss</file>
+        <file>LightTheme/LightThemeForTollBars/SaveAllButton.qss</file>
+        <file>LightTheme/LightThemeForTollBars/SaveButton.qss</file>
+        <file>LightTheme/LightThemeForTollBars/UndoButton.qss</file>
     </qresource>
     <qresource prefix="/IcoForMenu">
         <file>LightTheme/IcoForMenu/CreateFileIco.png</file>
@@ -10,5 +16,20 @@
         <file>LightTheme/IcoForMenu/OpenFileIco.png</file>
         <file>LightTheme/IcoForMenu/OpenIco.png</file>
         <file>LightTheme/IcoForMenu/OpenProjectIco.png</file>
+        <file>LightTheme/IcoForMenu/LanguageIco.png</file>
+    </qresource>
+    <qresource prefix="/TopToolBarIco">
+        <file>LightTheme/LightThemeForTollBars/ReturnIco.png</file>
+        <file>LightTheme/LightThemeForTollBars/UndoIco.png</file>
+        <file>LightTheme/LightThemeForTollBars/File.png</file>
+        <file>LightTheme/LightThemeForTollBars/FolderIco.png</file>
+        <file>LightTheme/LightThemeForTollBars/SaveAll.png</file>
+        <file>LightTheme/LightThemeForTollBars/SaveIco.png</file>
+        <file>LightTheme/LightThemeForTollBars/FileOpen.png</file>
+        <file>LightTheme/LightThemeForTollBars/FolderIcoOpen.png</file>
+        <file>LightTheme/LightThemeForTollBars/ReturnIcoOpen.png</file>
+        <file>LightTheme/LightThemeForTollBars/SaveAllOpen.png</file>
+        <file>LightTheme/LightThemeForTollBars/SaveIcoOpen.png</file>
+        <file>LightTheme/LightThemeForTollBars/UndoIcoOpen.png</file>
     </qresource>
 </RCC>

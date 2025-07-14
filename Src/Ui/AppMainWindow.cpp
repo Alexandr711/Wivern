@@ -45,12 +45,12 @@ void Wivern::MainWindow::createMenuHelp()
 void Wivern::MainWindow::allocateMemoryForTopToolBar()
 {
     TopToolBar = new QToolBar;
-    ToolBarOpenButton = new QToolButton;
-    ToolBarCreateAction = new QAction;
-    ToolBarSaveAction = new QAction;
-    ToolBarSaveAllAction = new QAction;
-    ToolBarUndoAction = new QAction;
-    ToolBarReturnAction = new QAction;
+    ToolBarOpenToolButton = new QToolButton;
+    ToolBarCreateToolButton = new QToolButton;
+    ToolBarSaveToolButton = new QToolButton;
+    ToolBarSaveAllToolButton = new QToolButton;
+    ToolBarUndoToolButton = new QToolButton;
+    ToolBarReturnToolButton = new QToolButton;
 }
 
 
@@ -89,12 +89,12 @@ void Wivern::MainWindow::deleteMenuHelp()
 
 void Wivern::MainWindow::deleteTopToolBar()
 {
-    delete ToolBarReturnAction;
-    delete ToolBarUndoAction;
-    delete ToolBarSaveAllAction;
-    delete ToolBarSaveAction;
-    delete ToolBarCreateAction;
-    delete ToolBarOpenButton;
+    delete ToolBarReturnToolButton;
+    delete ToolBarUndoToolButton;
+    delete ToolBarSaveAllToolButton;
+    delete ToolBarSaveToolButton;
+    delete ToolBarCreateToolButton;
+    delete ToolBarOpenToolButton;
     delete TopToolBar;
 }
 
@@ -211,12 +211,12 @@ void Wivern::MainWindow::createWindow()
 
 void Wivern::MainWindow::createTopToolBar()
 {
-    TopToolBar->addWidget(ToolBarOpenButton);
-    TopToolBar->addAction(ToolBarCreateAction);
-    TopToolBar->addAction(ToolBarSaveAction);
-    TopToolBar->addAction(ToolBarSaveAllAction);
-    TopToolBar->addAction(ToolBarUndoAction);
-    TopToolBar->addAction(ToolBarReturnAction);
+    TopToolBar->addWidget(ToolBarOpenToolButton);
+    TopToolBar->addWidget(ToolBarCreateToolButton);
+    TopToolBar->addWidget(ToolBarSaveToolButton);
+    TopToolBar->addWidget(ToolBarSaveAllToolButton);
+    TopToolBar->addWidget(ToolBarUndoToolButton);
+    TopToolBar->addWidget(ToolBarReturnToolButton);
 }
 
 
@@ -250,6 +250,7 @@ void Wivern::MainWindow::setLanguage(QString language)
     DarkTheme->setText(JsonLanguageDocument["Dark theme"].toString());
     LightTheme->setText(JsonLanguageDocument["Light theme"].toString());
 
+
     if(language == "Russian")
     {
         RussianAction->setChecked(true);
@@ -270,15 +271,37 @@ void Wivern::MainWindow::setTheme(QString theme)
 
     QString MenuIconsString;
 
+    QString CreateButtonStyleStr;
+    QString OpenButtonStyleStr;
+    QString SaveButtonStyleStr;
+    QString SaveAllButtonStyleStr;
+    QString UndoButtonStyleStr;
+    QString ReturnButtonStyleStr;
+
     if(theme == "Dark theme"){
         MainWindowStyleString = openQssFile(":/DarkTheme/MainDarkColorTheme.qss");
         MenuStyleString = openQssFile(":/DarkTheme/MenuDarkColorTheme.qss");
         MenuIconsString = openJsonFileForReading(":/DarkTheme/MenuFileIco.json");
+
+        CreateButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/CreateButton.qss");
+        OpenButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/OpenButton.qss");
+        SaveButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/SaveButton.qss");
+        SaveAllButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/SaveAllButton.qss");
+        UndoButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/UndoButton.qss");
+        ReturnButtonStyleStr = openQssFile(":/DarkTheme/DarkThemeForToolBars/ReturnButton.qss");
     }
     else if(theme == "Light theme"){
         MainWindowStyleString = openQssFile(":/LightTheme/MainLightColorTheme.qss");
         MenuStyleString = openQssFile(":/LightTheme/MenuLightColorTheme.qss");
         MenuIconsString = openJsonFileForReading(":/LightTheme/MenuFileIco.json");
+
+        CreateButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/CreateButton.qss");
+        OpenButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/OpenButton.qss");
+        SaveButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/SaveButton.qss");
+        SaveAllButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/SaveAllButton.qss");
+        UndoButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/UndoButton.qss");
+        ReturnButtonStyleStr = openQssFile(":/LightTheme/LightThemeForTollBars/ReturnButton.qss");
+
     }
 
     QJsonDocument JsonMenuIcoDocument = QJsonDocument::fromJson(MenuIconsString.toUtf8());
@@ -298,6 +321,19 @@ void Wivern::MainWindow::setTheme(QString theme)
     CreateFileAction->setIcon(QIcon(JsonMenuIcoDocument["Create file ico"].toString()));
     OpenFileAction->setIcon(QIcon(JsonMenuIcoDocument["Open file ico"].toString()));
     OpenProjectAction->setIcon(QIcon(JsonMenuIcoDocument["Open project ico"].toString()));
+    MenuSelectLanguage->setIcon(QIcon(JsonMenuIcoDocument["Language ico"].toString()));
+
+    //Setting icons for TopToolBar
+    JsonMenuIcoDocument = QJsonDocument::fromJson(CreateButtonStyleStr.toUtf8());
+
+    ToolBarCreateToolButton->setStyleSheet(CreateButtonStyleStr);
+    ToolBarOpenToolButton->setStyleSheet(OpenButtonStyleStr);
+    ToolBarSaveToolButton->setStyleSheet(SaveButtonStyleStr);
+    ToolBarSaveAllToolButton->setStyleSheet(SaveAllButtonStyleStr);
+    ToolBarUndoToolButton->setStyleSheet(UndoButtonStyleStr);
+    ToolBarReturnToolButton->setStyleSheet(ReturnButtonStyleStr);
+
+
     if(theme == "Dark theme")
     {
         DarkTheme->setChecked(true);
