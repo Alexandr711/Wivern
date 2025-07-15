@@ -29,6 +29,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         Src/Ui/LightThemeResources.qrc
         Src/Ui/MainToolBar.h Src/Ui/MainToolBar.cpp
+
+        Src/Ui/PlanToolsWidget.h Src/Ui/PlanToolsWidget.cpp
+        Src/Ui/ToolWidget.h Src/Ui/ToolWidget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Wivern APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

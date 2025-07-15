@@ -15,6 +15,7 @@
 #include <QDebug>
 
 
+
 namespace Wivern {
 
 class MainWindow: public QMainWindow{

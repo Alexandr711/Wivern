@@ -1,3 +1,5 @@
 #include "MainToolBar.h"
 
-MainToolBar::MainToolBar() {}
+Wivern::MainToolBar::MainToolBar(QWidget* parent): QToolBar(parent) {
+
+}
