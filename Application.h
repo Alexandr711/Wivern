@@ -2,9 +2,22 @@
 #define APPLICATION_H
 
 #include "Src/Ui/MainWindow.hpp"
+#include "Documents.h"
+#include "Src/Ui/StartSettingWidget.h"
 
-class Application{
+class Application
+{
+private:
+    Documents* Document;
+    StartSettingWidget* StartSetting;
 
+public:
+    Application();
+    ~Application();
+
+    void initApplication();
+    void startMainWindow();
+    void setLanguage(QString);
 };
 
 
