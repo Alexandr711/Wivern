@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>AppIco/ArrowOfIco.png</file>
+        <file>AppIco/ArrowOnIco.png</file>
+    </qresource>
+</RCC>

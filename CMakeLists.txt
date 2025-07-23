@@ -27,8 +27,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Src/Ui/MenuBar/FileMenu.h Src/Ui/MenuBar/FileMenu.cpp
         Src/Ui/MenuBar/HelpMenu.h Src/Ui/MenuBar/HelpMenu.cpp
         Src/Ui/ToolBars/MainToolBar.cpp Src/Ui/ToolBars/MainToolBar.hpp
-        Documents.h Documents.cpp
+
         Src/Ui/StartSettingWidget.h Src/Ui/StartSettingWidget.cpp Src/Ui/StartSettingWidget.ui
+        Src/Ui/AppIcons.qrc
+        Src/Ui/Document.h Src/Ui/Document.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Wivern APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
